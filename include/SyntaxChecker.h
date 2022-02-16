@@ -14,9 +14,11 @@ namespace SyntaxChecker
 		SyntaxErrorAnalyser(std::string inputFileName):_inptFileName(inputFileName) {}
 		void setInputFileName(std::string inputFileName);
 		void analyseSyntaxErrors(CharactorCount &errChrCount);
-		int calculateSyntaxErrorScore(CharactorCount &errChrCount);
+		void printSyntaxErrorScore(CharactorCount &errChrCount);
 
 	private:
+		int calculateSyntaxErrorScore(CharactorCount &errChrCount);
+
 		std::string _inptFileName;
 	};
 }
